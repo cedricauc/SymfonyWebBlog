@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil | {{ parent() }}{% endblock %}
+
+{% block body %}
+    <h1>Page d'accueil</h1>
+
+    {% if is_granted('ROLE_USER') %}
+        <p>Vous êtes connecté et pouvez accéder à l'<a href="{{ path('account') }}">espace membre</a>.</p>
+    {% else %}
+        <p><a href="{{ path('app_login') }}">Connectez-vous</a> pour accéder à l'espace membre.</p>
+    {% endif %}
+{% endblock %}

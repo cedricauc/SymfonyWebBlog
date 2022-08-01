@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Post | {{ parent() }}{% endblock %}
+
+{% block body %}
+    <div>
+        <h1>{{ currentPost.Title }}</h1>
+        <p>{{ currentPost.Content }}</p>
+    </div>
+
+
+{% endblock %}

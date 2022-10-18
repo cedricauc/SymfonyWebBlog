@@ -3,9 +3,8 @@
 {% block title %}Post | {{ parent() }}{% endblock %}
 
 {% block body %}
-    <div>
         <h1>{{ controller_name }}</h1>
-        <table>
+        <table class="table">
             <thead>
             <tr>
                 <th>Id</th>
@@ -33,12 +32,6 @@
                 </tr>
             {% endfor %}
             </tbody>
-
-
             <a href="{{ path('app_post_create') }}">Create new</a>
         </table>
-    </div>
-
-
-
 {% endblock %}
